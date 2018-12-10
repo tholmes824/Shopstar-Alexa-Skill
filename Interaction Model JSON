@@ -1,0 +1,965 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "shop star",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "FindProductsIntent",
+                    "slots": [],
+                    "samples": [
+                        "find an item",
+                        "try a new search",
+                        "help me find an item"
+                    ]
+                },
+                {
+                    "name": "GetProductTypeIntent",
+                    "slots": [
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType"
+                        }
+                    ],
+                    "samples": [
+                        "a {clothingType}",
+                        "I'm looking for a {clothingType}",
+                        "{clothingType}",
+                        "are there any {clothingType}",
+                        "i want a {clothingType}",
+                        "I'm looking for {clothingType}"
+                    ]
+                },
+                {
+                    "name": "GetColorIntent",
+                    "slots": [
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color",
+                            "samples": [
+                                "do you have {color}",
+                                "i'll try {color}",
+                                "i want {color}",
+                                "{color}"
+                            ]
+                        },
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType"
+                        }
+                    ],
+                    "samples": [
+                        "i'll try color",
+                        "i'll do color",
+                        "color please",
+                        "i want to pick a color",
+                        "color"
+                    ]
+                },
+                {
+                    "name": "GetSizeIntent",
+                    "slots": [
+                        {
+                            "name": "size",
+                            "type": "size",
+                            "samples": [
+                                "I want a size {size}",
+                                "I'll do {size}",
+                                "{size}"
+                            ]
+                        },
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType"
+                        }
+                    ],
+                    "samples": [
+                        "i want to pick a size",
+                        "size please",
+                        "size",
+                        "i'll do size",
+                        "I'll try size"
+                    ]
+                },
+                {
+                    "name": "AirtableSearchIntent",
+                    "slots": [],
+                    "samples": [
+                        "yes that's correct",
+                        "yes that's right",
+                        "yes please search for that",
+                        "yes please find that item"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "call an associate",
+                        "yes please",
+                        "yeah",
+                        "why not",
+                        "sure",
+                        "yes"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "no thank you",
+                        "nevermind",
+                        "nope",
+                        "nah",
+                        "no thanks",
+                        "no"
+                    ]
+                },
+                {
+                    "name": "StoreInformationIntent",
+                    "slots": [],
+                    "samples": [
+                        "i need store information",
+                        "i want store information",
+                        "store information",
+                        "give me store information"
+                    ]
+                },
+                {
+                    "name": "StoreHoursIntent",
+                    "slots": [],
+                    "samples": [
+                        "store hours"
+                    ]
+                },
+                {
+                    "name": "CheckAvailabilityIntent",
+                    "slots": [
+                        {
+                            "name": "optionChoice",
+                            "type": "optionChoice"
+                        }
+                    ],
+                    "samples": [
+                        "availability",
+                        "product availability",
+                        "check product availability",
+                        "check availability"
+                    ]
+                },
+                {
+                    "name": "WhatColorsIntent",
+                    "slots": [
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color"
+                        }
+                    ],
+                    "samples": [
+                        "what colors do you have",
+                        "what other colors are available",
+                        "what colors are available",
+                        "is that available in the color {color}"
+                    ]
+                },
+                {
+                    "name": "WhatSizesIntent",
+                    "slots": [
+                        {
+                            "name": "size",
+                            "type": "size"
+                        }
+                    ],
+                    "samples": [
+                        "what other colors are available",
+                        "is that available in a size {size}",
+                        "what sizes are available"
+                    ]
+                },
+                {
+                    "name": "OptionIntent",
+                    "slots": [
+                        {
+                            "name": "optionChoice",
+                            "type": "optionChoice"
+                        },
+                        {
+                            "name": "repeatChoice",
+                            "type": "repeatChoice"
+                        }
+                    ],
+                    "samples": [
+                        "option two",
+                        "option one",
+                        "try {optionChoice}",
+                        "I'll do {optionChoice}",
+                        "{optionChoice}"
+                    ]
+                },
+                {
+                    "name": "GetBrandIntent",
+                    "slots": [
+                        {
+                            "name": "brand",
+                            "type": "brand"
+                        },
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType"
+                        }
+                    ],
+                    "samples": [
+                        "i want to try a brand",
+                        "i want a brand",
+                        "i'll do brand",
+                        "brand",
+                        "i'll try brand"
+                    ]
+                },
+                {
+                    "name": "RepeatIntent",
+                    "slots": [
+                        {
+                            "name": "repeatChoice",
+                            "type": "repeatChoice"
+                        },
+                        {
+                            "name": "optionChoice",
+                            "type": "optionChoice"
+                        }
+                    ],
+                    "samples": [
+                        "{repeatChoice}"
+                    ]
+                },
+                {
+                    "name": "SalesDisclaimerIntent",
+                    "slots": [],
+                    "samples": [
+                        "sales",
+                        "i want to know about current sales",
+                        "tell me about current sales",
+                        "i want current sales",
+                        "current sales"
+                    ]
+                },
+                {
+                    "name": "DealsIntent",
+                    "slots": [],
+                    "samples": [
+                        "give me the deals",
+                        "give me deals",
+                        "my deals",
+                        "give me my deals please",
+                        "give me my deals"
+                    ]
+                },
+                {
+                    "name": "GetMyItemIntent",
+                    "slots": [
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color"
+                        }
+                    ],
+                    "samples": [
+                        "I'll do the {color} one",
+                        "I want the {color} one",
+                        "I'll take the {color} one"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "clothingType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "booties"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "flare pants"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pants"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sweater"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "crop sweater"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sweatshirt",
+                                "synonyms": [
+                                    "pullover",
+                                    "sweat shirt"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "skirt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mini skirt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "crop shirt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "crop top"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tee"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "t shirt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "top"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shirt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "flowy pants"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "capris",
+                                "synonyms": [
+                                    "capri pants"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bottoms"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lace up heels"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lace up boots"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ankle boots"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "heels"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shoes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "boots"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bag"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jacket",
+                                "synonyms": [
+                                    "outerwear",
+                                    "jackets"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dress",
+                                "synonyms": [
+                                    "dresses"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "colorOrSizeType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "no preference"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "size"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "color"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.Color",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "burgundy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "maroon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "khaki",
+                                "synonyms": [
+                                    "tan"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "off white",
+                                "synonyms": [
+                                    "cream"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "two toned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "metallic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "silver"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sheer",
+                                "synonyms": [
+                                    "see through"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "black and white"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "light blue",
+                                "synonyms": [
+                                    "bright blue",
+                                    "sky blue"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "size",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "extra large"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "extra small"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "24"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "23"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "22"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "21"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "20"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "19"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "18"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "17"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "16"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "15"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "14"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "13"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "12"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "11"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "10"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "9"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "8"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "7"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "6"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "3"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "1"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "0"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "optionChoice",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "option two",
+                                "synonyms": [
+                                    "option 2"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "option one",
+                                "synonyms": [
+                                    "option 1"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "repeatChoice",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "can you repeat them"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "can you repeat that"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "repeat them"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "please repeat them"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "repeat them please"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "repeat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "repeat my results"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "brand",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Brixton"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cooperative"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Paraphrase"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TG"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "H and M"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Forever 21"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetProductTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "GetColorIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.876563789614"
+                    },
+                    "slots": [
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1023736617274.1301036709119"
+                            }
+                        },
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "GetSizeIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.59228487345"
+                    },
+                    "slots": [
+                        {
+                            "name": "size",
+                            "type": "size",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.429594232365.670807304468"
+                            }
+                        },
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "GetBrandIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.841091431659"
+                    },
+                    "slots": [
+                        {
+                            "name": "brand",
+                            "type": "brand",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "clothingType",
+                            "type": "clothingType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.542247262302.1033360035695",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me the type of item you're looking for"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.371467090581",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Just to confirm, you want a {clothingType}"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.685085373346.508442184712",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How would you like to narrow your search, you can say color, size, or no preference"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1023736617274.1301036709119",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "okay, what color?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.429594232365.670807304468",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please pick a size"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What size would you like to try?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.876563789614",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Just to clarify, you're looking for a {color} {clothingType} . If this is right, say yes, please find that item or you can say try a new search"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.59228487345",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Just to clarify, you're looking for a {clothingType}  in the size {size} . If this is right, say yes, please find that item or you can say try a new search"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.841091431659",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Just to clarify, you're looking for a {clothingType} made by {brand} . If this is right, say yes, that's right or you can say try a new search"
+                    }
+                ]
+            }
+        ]
+    }
+}
